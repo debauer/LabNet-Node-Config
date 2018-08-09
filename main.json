@@ -1,0 +1,245 @@
+
+{
+    "node_types":{  
+        "basis":        "0x100",
+        "powerhub":     "0xF00",
+        "bridge":       "0x000",
+        "undefined":    "0xA00"
+    },
+    "nodes": [{
+        "powerhub1": {
+            "id": 1,
+            "type": "powerhub",
+            "name": "powerhub 1",
+            "location": "near wall rack"
+        },
+        "powerhub2": {
+            "id": 2,
+            "type": "powerhub",
+            "name": "powerhub 2",
+            "location": "tbd"
+        },
+        "powerhub3": {
+            "id": 3,
+            "type": "powerhub",
+            "name": "powerhub 3",
+            "location": "tbd"
+        },
+        "powerhub4": {
+            "id": 4,
+            "type": "powerhub",
+            "name": "powerhub 4",
+            "location": "tbd"
+        },
+        "labswitch": {
+            "id": 1,
+            "type": "basis",
+            "name": "labswitch",
+            "location": "tbd"
+        }
+    }]
+    ,
+    "strips": [{
+        "14-door":{
+            "node": "powerhub1", 
+            "id": 3,
+            "nr": 14, 
+            "location": "over the door"
+        },
+        "9-matrix":{
+            "node": "powerhub1", 
+            "id": 2,
+            "nr": 9, 
+            "location": "behind the LED Matrix"
+        },
+        "1-felicia":{
+            "node": "powerhub1", 
+            "id": 1,
+            "nr": 1, 
+            "location": "near felicia"
+        },
+        "15-TBD":{
+            "node": "powerhub2",
+            "id": 1,
+            "nr": 15, 
+            "location": "over the door"
+        },
+        "3-TBD":{
+            "node": "powerhub2",
+            "id": 2,
+            "nr": 3, 
+            "location": "over the door"
+        },
+        "13-TBD":{
+            "node": "powerhub3",
+            "id": 1,
+            "nr": 13, 
+            "location": "over the door"
+        },
+        "4-TBD":{
+            "node": "powerhub3",
+            "id": 2,
+            "nr": 4, 
+            "location": "over the door"
+        },
+        "12-TBD":{
+            "node": "powerhub4",
+            "id": 1,
+            "nr": 12,
+            "location": "over the door"
+        }
+    }]
+    ,  
+    "plugs": [{
+        "WLAN1":{
+            "id": 3,
+            "strip": "14-door", 
+            "name": "WLAN1",
+            "description": "WLan AP near door",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },       
+        "NetzteilOutdoor":{
+            "id": 5,
+            "strip": "14-door", 
+            "name": "NetzteilOutdoor",
+            "description": "Powers light and stuff outdoor",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Kompressor":{
+            "id": 6,
+            "strip": "14-door",
+            "name": "Kompressor",
+            "description": "Air compressor near Door",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "LichtVorne":{
+            "id": 2,
+            "strip": "9-matrix",
+            "name": "Licht Vorne",
+            "description": "Licht",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "LagerLicht":{
+            "id": 1,
+            "strip": "3-TBD",
+            "name": "Lager Licht",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Netzgeraet":{
+            "id": 3,
+            "strip": "3-TBD",
+            "name": "Netz Geraet",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "InfoDisplay":{
+            "id": 4,
+            "strip": "3-TBD",
+            "name": "Info Display",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Oszi":{
+            "id": 5,
+            "strip": "3-TBD",
+            "name": "Oszi",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Loetkolben":{
+            "id": 6,
+            "strip": "3-TBD",
+            "name": "Loetkolben",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Switch":{
+            "id": 1,
+            "strip": "4-TBD",
+            "name": "Switch",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "B0Drucker":{
+            "id": 2,
+            "strip": "4-TBD",
+            "name": "B0 Drucker",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "LichtHinten":{
+            "id": 3,
+            "strip": "4-TBD",
+            "name": "Licht hinten",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "LichtMitte":{
+            "id": 4,
+            "strip": "4-TBD",
+            "name": "Licht mitte",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Drehbank":{
+            "id": 5,
+            "strip": "4-TBD",
+            "name": "Drehbank",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Hexagon3D-Drucker":{
+            "id": 6,
+            "strip": "4-TBD",
+            "name": "Hexagon 3D-Drucker",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        }
+    }]
+}
