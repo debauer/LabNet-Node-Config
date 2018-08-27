@@ -10,25 +10,25 @@
         "powerhub1": {
             "id": 1,
             "type": "powerhub",
-            "name": "powerhub 1",
+            "name": "powerhub1",
             "location": "near wall rack"
         },
         "powerhub2": {
             "id": 2,
             "type": "powerhub",
-            "name": "powerhub 2",
+            "name": "powerhub2",
             "location": "tbd"
         },
         "powerhub3": {
             "id": 3,
             "type": "powerhub",
-            "name": "powerhub 3",
+            "name": "powerhub3",
             "location": "tbd"
         },
         "powerhub4": {
             "id": 4,
             "type": "powerhub",
-            "name": "powerhub 4",
+            "name": "powerhub4",
             "location": "tbd"
         },
         "labswitch": {
@@ -42,48 +42,56 @@
     "strips": [{
         "14-door":{
             "node": "powerhub1", 
+            "name": "14-door",
             "id": 3,
             "nr": 14, 
             "location": "over the door"
         },
         "9-matrix":{
             "node": "powerhub1", 
+            "name": "9-matrix",
             "id": 2,
             "nr": 9, 
             "location": "behind the LED Matrix"
         },
         "1-felicia":{
             "node": "powerhub1", 
+            "name": "1-felicia",
             "id": 1,
             "nr": 1, 
             "location": "near felicia"
         },
         "15-TBD":{
             "node": "powerhub2",
+            "name": "15-TBD",
             "id": 1,
             "nr": 15, 
             "location": "over the door"
         },
         "3-TBD":{
             "node": "powerhub2",
+            "name": "3-TBD",
             "id": 2,
             "nr": 3, 
             "location": "over the door"
         },
         "13-TBD":{
             "node": "powerhub3",
+            "name": "13-TBD",
             "id": 1,
             "nr": 13, 
             "location": "over the door"
         },
         "4-TBD":{
             "node": "powerhub3",
+            "name": "4-TBD",
             "id": 2,
             "nr": 4, 
             "location": "over the door"
         },
         "12-TBD":{
             "node": "powerhub4",
+            "name": "12-TBD",
             "id": 1,
             "nr": 12,
             "location": "over the door"
@@ -121,8 +129,18 @@
             "default": 0,
             "changeable": 1
         },
-        "LichtVorne":{
-            "id": 2,
+        "Licht Drucker":{
+            "id": 1,
+            "strip": "9-matrix",
+            "name": "Licht Drucker",
+            "description": "Licht",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Licht Vorne":{
+            "id": 6,
             "strip": "9-matrix",
             "name": "Licht Vorne",
             "description": "Licht",
@@ -131,10 +149,10 @@
             "default": 0,
             "changeable": 1
         },
-        "LagerLicht":{
+        "Licht Lager":{
             "id": 1,
             "strip": "3-TBD",
-            "name": "Lager Licht",
+            "name": "Licht Lager",
             "description": "",
             "onOff": 0, 
             "onOn": 1,
@@ -144,7 +162,7 @@
         "Netzgeraet":{
             "id": 3,
             "strip": "3-TBD",
-            "name": "Netz Geraet",
+            "name": "Netzgeraet",
             "description": "",
             "onOff": 0, 
             "onOn": 1,
@@ -154,7 +172,7 @@
         "InfoDisplay":{
             "id": 4,
             "strip": "3-TBD",
-            "name": "Info Display",
+            "name": "InfoDisplay",
             "description": "",
             "onOff": 0, 
             "onOn": 1,
@@ -194,7 +212,7 @@
         "B0Drucker":{
             "id": 2,
             "strip": "4-TBD",
-            "name": "B0 Drucker",
+            "name": "B0Drucker",
             "description": "",
             "onOff": 0, 
             "onOn": 1,
@@ -204,14 +222,34 @@
         "LichtHinten":{
             "id": 3,
             "strip": "4-TBD",
-            "name": "Licht hinten",
+            "name": "LichtHinten",
             "description": "",
             "onOff": 0, 
             "onOn": 1,
             "default": 0,
             "changeable": 1
         },
-        "LichtMitte":{
+        "TEST1":{
+            "id": 1,
+            "strip": "13-TBD",
+            "name": "TEST1",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "TEST2":{
+            "id": 2,
+            "strip": "13-TBD",
+            "name": "TEST2",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "Licht mitte":{
             "id": 4,
             "strip": "4-TBD",
             "name": "Licht mitte",
@@ -231,7 +269,7 @@
             "default": 0,
             "changeable": 1
         },
-        "Hexagon3D-Drucker":{
+        "Hexagon 3D-Drucker":{
             "id": 6,
             "strip": "4-TBD",
             "name": "Hexagon 3D-Drucker",
