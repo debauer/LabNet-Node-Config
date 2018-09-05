@@ -61,11 +61,11 @@
             "nr": 1, 
             "location": "near felicia"
         },
-        "15-TBD":{
+        "7-TBD":{
             "node": "powerhub2",
-            "name": "15-TBD",
+            "name": "7-TBD",
             "id": 1,
-            "nr": 15, 
+            "nr": 7, 
             "location": "over the door"
         },
         "3-TBD":{
@@ -231,7 +231,7 @@
         },
         "TEST1":{
             "id": 1,
-            "strip": "13-TBD",
+            "strip": "7-TBD",
             "name": "TEST1",
             "description": "",
             "onOff": 0, 
@@ -239,10 +239,30 @@
             "default": 0,
             "changeable": 1
         },
-        "TEST2":{
-            "id": 2,
+        "Licht hinten":{
+            "id": 3,
             "strip": "13-TBD",
-            "name": "TEST2",
+            "name": "Licht hinten",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "TEST3":{
+            "id": 1,
+            "strip": "12-TBD",
+            "name": "TEST3",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1
+        },
+        "TEST4":{
+            "id": 2,
+            "strip": "12-TBD",
+            "name": "TEST4",
             "description": "",
             "onOff": 0, 
             "onOn": 1,

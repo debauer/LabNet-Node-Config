@@ -1,0 +1,302 @@
+
+{
+    "node_types":{  
+        "basis":        "0x100",
+        "powerhub":     "0xF00",
+        "braddressge":       "0x000",
+        "undefined":    "0xA00"
+    },
+    "nodes": [{
+            "address": 1,
+            "type": "powerhub",
+            "id": "powerhub1",
+            "location": "near wall rack",
+            "displayText": "powerhub1"
+        },{
+            "address": 2,
+            "type": "powerhub",
+            "id": "powerhub2",
+            "location": "tbd",
+            "displayText": "powerhub2"
+        },{
+            "address": 3,
+            "type": "powerhub",
+            "id": "powerhub3",
+            "location": "tbd",
+            "displayText": "powerhub3"
+        },{
+            "address": 4,
+            "type": "powerhub",
+            "id": "powerhub4",
+            "location": "tbd",
+            "displayText": "powerhub4"
+        },{
+            "address": 1,
+            "type": "basis",
+            "id": "labswitch",
+            "location": "assd",
+            "displayText": "powerhub4"
+        }
+    ]
+    ,
+    "strips": [{
+            "nodeId": "powerhub1", 
+            "id": "14-door",
+            "address": 3,
+            "nr": 14, 
+            "location": "over the door",
+            "displayText": "14-door"
+        },{
+            "nodeId": "powerhub1", 
+            "id": "9-matrix",
+            "address": 2,
+            "nr": 9, 
+            "location": "behind the LED Matrix",
+            "displayText": "matrix"
+        },{
+            "nodeId": "powerhub1", 
+            "id": "1-felicia",
+            "address": 1,
+            "nr": 1, 
+            "location": "near felicia",
+            "displayText": "felicia"
+        },{
+            "nodeId": "powerhub2",
+            "id": "7-TBD",
+            "address": 1,
+            "nr": 7, 
+            "location": "over the door",
+            "displayText": "TBD"
+        },{
+            "nodeId": "powerhub2",
+            "id": "3-TBD",
+            "address": 2,
+            "nr": 3, 
+            "location": "over the door",
+            "displayText": "TBD"
+        },{
+            "nodeId": "powerhub3",
+            "id": "13-TBD",
+            "address": 1,
+            "nr": 13, 
+            "location": "over the door",
+            "displayText": "TBD"
+        },{
+            "nodeId": "powerhub3",
+            "id": "4-TBD",
+            "address": 2,
+            "nr": 4, 
+            "location": "over the door",
+            "displayText": "TBD"
+        },{
+            "nodeId": "powerhub4",
+            "id": "12-TBD",
+            "address": 1,
+            "nr": 12,
+            "location": "over the door",
+            "displayText": "TBD"
+        }]
+    ,  
+    "plugs": [{
+            "address": 3,
+            "stripId": "14-door", 
+            "id": "WLAN1",
+            "description": "WLan AP near door",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "WLAN1"
+        },{
+            "address": 5,
+            "stripId": "14-door", 
+            "id": "NetzteilOutdoor",
+            "description": "Powers light and stuff outdoor",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "NetzteilOutdoor"
+        },{
+            "address": 6,
+            "stripId": "14-door",
+            "id": "Kompressor",
+            "description": "Air compressor near Door",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Kompressor"
+        },{
+            "address": 1,
+            "stripId": "9-matrix",
+            "id": "Licht Drucker",
+            "description": "Licht",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Licht Drucker"
+        },{
+            "address": 6,
+            "stripId": "9-matrix",
+            "id": "Licht Vorne",
+            "description": "Licht",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Licht Vorne"
+        },{
+            "address": 1,
+            "stripId": "3-TBD",
+            "id": "Licht Lager",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Licht Lage"
+        },{
+            "address": 3,
+            "stripId": "3-TBD",
+            "id": "Netzgeraet",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Netzgeraet"
+        },{
+            "address": 4,
+            "stripId": "3-TBD",
+            "id": "InfoDisplay",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "InfoDisplay"
+        },{
+            "address": 5,
+            "stripId": "3-TBD",
+            "id": "Oszi",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Oszi"
+        },{
+            "address": 6,
+            "stripId": "3-TBD",
+            "id": "Loetkolben",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Loetkolben"
+        },{
+            "address": 1,
+            "stripId": "4-TBD",
+            "id": "Switch",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Switch"
+        },{
+            "address": 2,
+            "stripId": "4-TBD",
+            "id": "B0Drucker",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "B0Drucker"
+        },{
+            "address": 3,
+            "stripId": "4-TBD",
+            "id": "LichtHinten",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "LichtHinten"
+        },{
+            "address": 1,
+            "stripId": "7-TBD",
+            "id": "TEST1",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "TEST1"
+        },{
+            "address": 3,
+            "stripId": "13-TBD",
+            "id": "Licht Hinten",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Licht Hinten"
+        },{
+            "address": 1,
+            "stripId": "12-TBD",
+            "id": "TEST3",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "TEST3"
+        },{
+            "address": 2,
+            "stripId": "12-TBD",
+            "id": "TEST4",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "TEST4"
+        },{
+            "address": 4,
+            "stripId": "4-TBD",
+            "id": "Licht mitte",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Licht mitte"
+        },{
+            "address": 5,
+            "stripId": "4-TBD",
+            "id": "Drehbank",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Drehbank"
+        },{
+            "address": 6,
+            "stripId": "4-TBD",
+            "id": "Hexagon 3D-Drucker",
+            "description": "",
+            "onOff": 0, 
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Hexagon 3D-Drucker"
+        }
+    ]
+}
