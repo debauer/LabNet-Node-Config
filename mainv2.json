@@ -44,119 +44,154 @@
             "id": "14-door",
             "address": 3,
             "nr": 14,
-            "location": "over the door",
-            "displayText": "Door"
+            "location": "Über Eingangstür",
+            "displayText": "Eingangstür"
         },{
             "nodeId": "powerhub1",
             "id": "9-matrix",
             "address": 2,
             "nr": 9,
-            "location": "behind the LED Matrix",
-            "displayText": "Über Matrix"
+            "location": "Hinter der LED Matrix [Reklame]",
+            "displayText": "Matrix"
         },{
             "nodeId": "powerhub1",
             "id": "1-felicia",
             "address": 1,
             "nr": 1,
-            "location": "ueber Werkbankbei Felicia",
+            "location": "über Werkbank bei Felicia",
             "displayText": "IT"
         },{
             "nodeId": "powerhub2",
             "id": "7-TBD",
             "address": 1,
             "nr": 7,
-            "location": "over the door",
-            "displayText": "TBD"
+            "location": "hängt links über Laser",
+            "displayText": "Laser"
         },{
             "nodeId": "powerhub2",
             "id": "8-TBD",
             "address": 2,
             "nr": 8,
-            "location": "Elektronikecke",
-            "displayText": "Elektri"
+            "location": "hinter den Netzteilen im Regal",
+            "displayText": "Elektronikecke"
         },{
             "nodeId": "powerhub3",
-            "id": "13-TBD",
+            "id": "13-Kuehlschrank",
             "address": 1,
             "nr": 13,
-            "location": "over the door",
-            "displayText": "TBD"
+            "location": "Über Kühlschrank",
+            "displayText": "Kühlschrank"
         },{
             "nodeId": "powerhub3",
-            "id": "4-TBD",
+            "id": "4-COUCH",
             "address": 2,
             "nr": 4,
-            "location": "over the door",
-            "displayText": "TBD"
+            "location": "über den Couchen",
+            "displayText": "Couch"
         },{
             "nodeId": "powerhub4",
-            "id": "12-TBD",
+            "id": "12-Spint",
             "address": 1,
             "nr": 12,
-            "location": "over the door",
-            "displayText": "TBD"
+            "location": "über den Spinten",
+            "displayText": "Spint"
+        },{
+            "nodeId": "powerhub4",
+            "id": "10-Drucker",
+            "address": 1,
+            "nr": 12,
+            "location": "über den 3D Drucker",
+            "displayText": "Drucker"
         }]
     ,
     "plugs": [{
             "address": 3,
-            "stripId": "14-door",
-            "id": "WLAN1",
-            "description": "Wlan AP near door",
+            "stripId": "1-felicia",
+            "id": "Reklame",
+            "description": "Reklame",
             "onOff": 0,
             "onOn": 1,
             "default": 0,
             "changeable": 1,
-            "displayText": "WLAN1"
+            "displayText": "Reklame",
+            "groups":"werbung"
+        },{
+            "address": 6,
+            "stripId": "14-door",
+            "id": "WLAN1",
+            "description": "Wlan AP near door",
+            "onOff": 1,
+            "onOn": 1,
+            "default": 1,
+            "changeable": 0,
+            "displayText": "WLAN1",
+            "groups":"infra"
+        },{
+            "address": 4,
+            "stripId": "14-door",
+            "id": "LedBealle",
+            "description": "",
+            "onOff": 0,
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "LED Bälle",
+            "groups":"werbung"
         },{
             "address": 5,
             "stripId": "14-door",
             "id": "NetzteilOutdoor",
             "description": "Powers light and stuff outdoor",
             "onOff": 0,
-            "onOn": 1,
+            "onOn": 0,
             "default": 0,
             "changeable": 1,
-            "displayText": "NetzteilOutdoor"
+            "displayText": "NetzteilOutdoor",
+            "groups":""
         },{
-            "address": 6,
+            "address": 3,
             "stripId": "14-door",
             "id": "Kompressor",
             "description": "Air compressor near Door",
             "onOff": 0,
-            "onOn": 1,
+            "onOn": 0,
             "default": 0,
             "changeable": 1,
-            "displayText": "Kompressor"
+            "displayText": "Kompressor",
+            "groups":"werbung"
         },{
             "address": 1,
             "stripId": "9-matrix",
-            "id": "LichtDrucker",
+            "id": "Licht3DDrucker",
             "description": "Licht",
             "onOff": 0,
             "onOn": 1,
             "default": 0,
             "changeable": 1,
-            "displayText": "Licht Drucker"
+            "displayText": "Licht 3D Drucker",
+            "groups":"licht"
         },{
             "address": 6,
             "stripId": "9-matrix",
-            "id": "LichtVorne",
+            "id": "LichtPCs",
             "description": "Licht",
             "onOff": 0,
             "onOn": 1,
             "default": 0,
             "changeable": 1,
-            "displayText": "Licht Vorne"
+            "displayText": "Licht PCs",
+            "groups":"licht"
         },{
             "address": 1,
             "stripId": "8-TBD",
             "id": "Licht Lager",
-            "description": "",
+            "description": "Switch - hängt Laser dran",
             "onOff": 0,
             "onOn": 1,
             "default": 0,
-            "changeable": 1,
-            "displayText": "Licht Lage"
+            "changeable": 0,
+            "displayText": "Switch",
+            "groups":"infra"
         },{
             "address": 3,
             "stripId": "8-TBD",
@@ -166,17 +201,8 @@
             "onOn": 1,
             "default": 0,
             "changeable": 1,
-            "displayText": "Netzgeraet"
-        },{
-            "address": 4,
-            "stripId": "8-TBD",
-            "id": "InfoDisplay",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "InfoDisplay"
+            "displayText": "Netzgerät",
+            "groups":""
         },{
             "address": 5,
             "stripId": "8-TBD",
@@ -186,7 +212,8 @@
             "onOn": 1,
             "default": 0,
             "changeable": 1,
-            "displayText": "Oszi"
+            "displayText": "Oszi",
+            "groups":""
         },{
             "address": 6,
             "stripId": "8-TBD",
@@ -196,107 +223,30 @@
             "onOn": 1,
             "default": 0,
             "changeable": 1,
-            "displayText": "Loetkolben"
-        },{
-            "address": 1,
-            "stripId": "4-TBD",
-            "id": "Switch",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "Switch"
-        },{
-            "address": 2,
-            "stripId": "4-TBD",
-            "id": "B0Drucker",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "B0Drucker"
+            "displayText": "Loetkolben",
+            "groups":""
         },{
             "address": 3,
-            "stripId": "4-TBD",
-            "id": "LichtHinten",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "LichtHinten"
-        },{
-            "address": 1,
-            "stripId": "7-TBD",
-            "id": "TEST1",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "TEST1"
-        },{
-            "address": 3,
-            "stripId": "13-TBD",
+            "stripId": "13-Kuehlschrank",
             "id": "Licht Hinten",
             "description": "",
             "onOff": 0,
             "onOn": 1,
             "default": 0,
             "changeable": 1,
-            "displayText": "Licht Hinten"
+            "displayText": "Licht Hinten",
+            "groups":"licht"
         },{
-            "address": 1,
-            "stripId": "12-TBD",
-            "id": "TEST3",
-            "description": "",
+            "address": 3,
+            "stripId": "7-TBD",
+            "id": "FablabLampe",
+            "description": "Hängt über Lasercutter",
             "onOff": 0,
             "onOn": 1,
             "default": 0,
             "changeable": 1,
-            "displayText": "TEST3"
-        },{
-            "address": 2,
-            "stripId": "12-TBD",
-            "id": "TEST4",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "TEST4"
-        },{
-            "address": 4,
-            "stripId": "4-TBD",
-            "id": "Licht mitte",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "Licht mitte"
-        },{
-            "address": 5,
-            "stripId": "4-TBD",
-            "id": "Drehbank",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "Drehbank"
-        },{
-            "address": 6,
-            "stripId": "4-TBD",
-            "id": "Hexagon 3D-Drucker",
-            "description": "",
-            "onOff": 0,
-            "onOn": 1,
-            "default": 0,
-            "changeable": 1,
-            "displayText": "Hexagon 3D-Drucker"
+            "displayText": "Fablab Lampe",
+            "groups":"werbung"
         }
     ]
 }
