@@ -3,67 +3,78 @@ from os import listdir
 from os.path import isfile, join
 import os, json
 
-from nodeConfig import node
-from nodeConfig import strip
-from nodeConfig import plug
+from . node import Node
+from . strip import Strip
+from . plug import Plug
 
 nodes = {}
 strips = {}
 plugs = {}
 
-def buildUpObjects(file):
+def destroyObjects():
+    nodes = {}
+    strips = {}
+    plugs = {}
+
+def load_definition_file(file):
     with open(file, 'r') as readFile:
-        jsonData = json.load(readFile)
+        json_data = json.load(readFile)
 
-    for nodeName in jsonData["nodes"][0]:
-        obj = jsonData['nodes'][0][nodeName]
-        nodes[nodeName] = node.Node(obj)
+    for node_data in json_data["nodes"]:
+        nodes[node_data["id"]] = Node(node_data)
 
-    for stripName in jsonData["strips"][0]:
-        obj = jsonData['strips'][0][stripName]
-        strips[stripName] = strip.Strip(obj)
+    for strip_data in json_data["strips"]:
+        strip = strips[strip_data["id"]] = Strip(strip_data)
 
-    for plugName in jsonData["plugs"][0]:
-        obj = jsonData['plugs'][0][plugName]
-        plugs[plugName] = plug.Plug(obj)
+        node_id = strip.getNodeId()
+        nodes[node_id].addStrip(strip)
 
-    for stripName in strips:
-        nodeName = strips[stripName].getNode()
-        nodes[nodeName].addStrip(strips[stripName])
 
-    for plugName in plugs:
-        stripName = plugs[plugName].getStrip()
-        strips[stripName].addPlug(plugs[plugName])
+    for plug_data in json_data["plugs"]:
+        plugs[plug_data["id"]] = Plug(plug_data)
 
-def getPlugNameByAdress(plug,strip,node):
+    for plug_name in plugs:
+        strip_name = plugs[plug_name].getStripId()
+        strips[strip_name].addPlug(plugs[plug_name])
+
+
+
+def get_plug_id_by_adress(plug_address, strip_address, node_address):
     #print(plug,strip,node)
-    for p in plugs:
-        pid = plugs[p].getId()
-        sid = strips[plugs[p].getStrip()].getId()
-        nid = nodes[strips[plugs[p].getStrip()].getNode()].getId()
-        if pid == plug and sid == strip and nid == node:
-            return p
+    for plug_id in plugs:
+        plug = plugs[plug_id]
+        plug_strip = strips[plug.getStripId()]
+        plug_node = nodes[plug_strip.getNodeId()]
+        if plug.getAddress() == plug_address \
+            and plug_strip.getAddress() == strip_address \
+            and plug_node.getAddress() == node_address:
+            return plug.getId()
     return False
 
-def getStripNameByAdress(strip,node):
+def get_strip_id_by_adress(strip, node):
     for s in strips:
         sid = strips[s].getId()
-        nid = nodes[strips[s].getNode()].getId()
+        nid = nodes[strips[s].getNodeId()].getId()
         if sid == strip and nid == node:
-            return s 
+            return s
     return False
 
+def get_strip_address_by_id(strip_id):
+    return strips[strip_id].getAddress()
 
+def get_node_address_by_id(node_id):
+    return nodes[node_id].getAddress()
 
-def getPlugAdressByName(name):
-    pid = plugs[name].getId()
-    sid = strips[plugs[name].getStrip()].getId()
-    nid = nodes[strips[plugs[name].getStrip()].getNode()].getId()
-    return {"node":nid, "strip":sid, "plug":pid}
+def get_plug_adress_by_id(id):
+    plug = plugs[id]
+    node_id = strips[plug.getStripId()].getNodeId()
+    return {
+        "nodeAddress": get_node_address_by_id(node_id),
+        "stripAddress": get_strip_address_by_id(plug.getStripId()),
+        "plugAddress": plug.getAddress()
+    }
 
 def cleanUpObjects():
     strips.clear()
     nodes.clear()
     plugs.clear()
-
-buildUpObjects("nodeConfig/main.json")

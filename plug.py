@@ -1,6 +1,6 @@
 from nodeConfig.base import Base
 
-class Plug(Base): 
+class Plug(Base):
     def __init__(self, plug):
         Base.__init__(self, plug)
         if self.data["default"]:
@@ -9,7 +9,7 @@ class Plug(Base):
             self.data["status"] = "off"
 
     def __str__(self):
-        return "plug: " + self.plug["name"] + " adress: " + str(self.plug["id"]) + " " + str(self.strip["id"]) + " " + str(self.node["id"]) + " "
+        return "plug: " + self.data["name"] + " address: " + str(self.data["address"]) + " " + str(self.data["id"]) + " " + str(self.data["pludId"]) + " "
 
     def setOn(self):
         self.data["status"] = "on"
@@ -23,8 +23,8 @@ class Plug(Base):
         else:
             self.data["status"] = "off"
 
-    def getStrip(self):
-        return self.data["strip"]
+    def getStripId(self):
+        return self.data["stripId"]
 
     def getStatus(self):
         return self.data["status"]

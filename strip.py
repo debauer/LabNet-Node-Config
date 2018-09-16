@@ -1,6 +1,6 @@
 from nodeConfig.base import Base
 
-class Strip(Base): 
+class Strip(Base):
     def __init__(self, strip):
         Base.__init__(self, strip)
 
@@ -9,5 +9,5 @@ class Strip(Base):
     getPlugs = Base.getChild
     getPlugNames = Base.getChildNames
 
-    def getNode(self):
-        return self.data["node"]
+    def getNodeId(self):
+        return self.data["nodeId"]

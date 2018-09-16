@@ -1,4 +1,4 @@
-class Base: 
+class Base:
     def __init__(self, data):
         self.data = data
         self.childs = []
@@ -6,17 +6,23 @@ class Base:
     def getData(self):
         return self.data
 
-    def setName(self,name):
-        self.data["name"] = name
+    def getAddress(self):
+        return self.data["address"]
 
-    def getName(self):
-        return self.data["name"]
+    #def setName(self,name):
+    #    self.data["name"] = name
+
+    #def getName(self):
+    #    return self.data["name"]
 
     def setId(self,Id):
         self.data["id"] = Id
 
     def getId(self):
         return self.data["id"]
+
+    setName = setId
+    getName = getId
 
     def addChild(self,child):
         self.childs.append(child)
