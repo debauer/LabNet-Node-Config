@@ -116,6 +116,17 @@
             "displayText": "Reklame",
             "groups":"werbung"
         },{
+            "address": 2,
+            "stripId": "14-door",
+            "id": "Schild aussen",
+            "description": "Türschild 'A13'",
+            "onOff": 1,
+            "onOn": 1,
+            "default": 0,
+            "changeable": 1,
+            "displayText": "Schild aussen",
+            "groups":"werbung"
+        },{
             "address": 6,
             "stripId": "14-door",
             "id": "WLAN1",
