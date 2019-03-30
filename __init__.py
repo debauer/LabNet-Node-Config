@@ -74,7 +74,67 @@ def get_plug_adress_by_id(id):
         "plugAddress": plug.getAddress()
     }
 
+def getOnlyActiveStripNamesSortedJson():
+    data = {}
+    for plug_id in plugs:
+        if not plugs[plug_id].getStripId() in data.keys():
+            #pass
+            id = plugs[plug_id].getStripId()
+            data[id] = {}
+            data[id]["stripId"] = strips[id].getId()
+            data[id]["displayText"] = strips[id].getData()["displayText"]  
+            data[id]["location"] = strips[id].getData()["location"]  
+    return data
+
+def getOnlyActiveStripNamesSorted():
+    st = []
+    for plug_id in plugs:
+        if not plugs[plug_id].getStripId() in st:
+            #pass
+            st.append(plugs[plug_id].getStripId())
+    return st
+
+def getStripNamesSortedJson():
+    data = {}
+    for n in nodes:
+        strip_list = nodes[n].getStripNames()
+        for s in strip_list:
+            if not s in data.keys():
+                data[s] = {}
+                data[s]["stripId"] = strips[s].getId()
+                data[s]["displayText"] = strips[s].getData()["displayText"]
+                data[s]["location"] = strips[s].getData()["location"]
+    return data 
+
+def getStripNamesSorted():
+    list_of_strips = []
+    for n in nodes:
+        strip_list = nodes[n].getStripNames()
+        for s in strip_list:
+            list_of_strips.append(s)
+    list_of_strips.sort()
+    return list_of_strips
+
+def getAllPlugsJson():
+    data = {}
+    for plug_id in plugs:
+        strip_id = plugs[plug_id].getStripId()
+        if not strip_id in data.keys():
+            data[strip_id] = []
+            #plugs[plugId].getData()
+        data[strip_id].append(plugs[plug_id].getData())
+        sorted(data[strip_id], key=lambda x:sorted(x.keys()))
+    return data
+
+
 def cleanUpObjects():
     strips.clear()
     nodes.clear()
     plugs.clear()
+
+
+def loadConfig():
+    print("loadConfig: destroyObjects()")
+    destroyObjects()
+    print("loadConfig: load_definition_file(\"nodeConfig/mainv2.json\")")
+    load_definition_file("nodeConfig/mainv2.json")
